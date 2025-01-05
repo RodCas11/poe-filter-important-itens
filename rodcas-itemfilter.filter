@@ -1,0 +1,144 @@
+# ===========================================================
+#  Important Filter itens
+#
+#  Make by RodCas
+# ===========================================================
+#  SOCIALS
+#  Discord "rodcas"
+#  https://github.com/RodCas11/poe-filter-important-itens
+# ===========================================================
+#  Show / Currency, Gems, Uniques, 6S/6L, Maps...
+# ===========================================================
+
+# -----------------------------------------------------------
+# Exemplos (exemple):
+# -----------------------------------------------------------
+# SetBackgroundColor R G B A (0-255)
+# SetTextColor       R G B A (0-255)
+# SetBorderColor     R G B A (0-255)
+# PlayAlertSound     <ID> <Volume> (ID: 1 a 16; Volume: 0-300)
+# SetFontSize        <size>
+# MinimapIcon        <size> <color> <shape>
+# PlayEffect         <color>
+
+# ===========================================================
+#                 MOEDAS (Currency)
+# ===========================================================
+Show 
+    Class "Currency"
+    SetBackgroundColor 0 0 0 230    
+    SetTextColor 255 255 255 255      
+    SetBorderColor 255 215 0 255       
+    SetFontSize 45
+    PlayAlertSound 1 300
+    MinimapIcon 2 Yellow Diamond
+    PlayEffect Yellow
+
+# ===========================================================
+#                 FRAGMENTOS (Fragments)
+# ===========================================================
+Show 
+    Class "Map Fragment"
+    SetBackgroundColor 25 25 60 230    
+    SetTextColor 200 200 255 255
+    SetBorderColor 136 136 255 255     
+    SetFontSize 40
+    PlayAlertSound 2 250
+    MinimapIcon 2 Blue Square
+    PlayEffect Cyan
+
+# ===========================================================
+#                 ESSENCES (Opcional)
+# ===========================================================
+Show
+    BaseType "Essence"
+    SetBackgroundColor 0 50 50 230      
+    SetTextColor 150 255 150 255
+    SetBorderColor 0 220 180 255
+    SetFontSize 40
+    PlayAlertSound 3 200
+    MinimapIcon 2 Green Kite
+    PlayEffect Green
+
+# ===========================================================
+#                 GEMAS (Gems)
+# ===========================================================
+Show
+    Class "Gems"
+    SetBackgroundColor 15 15 50 230     
+    SetTextColor 120 200 255 255
+    SetBorderColor 0 100 200 255
+    SetFontSize 40
+    PlayAlertSound 4 250
+    MinimapIcon 2 Blue Raindrop
+    PlayEffect Blue
+    
+# ===========================================================
+#                 ITENS RAROS (Rare Itens)
+# ===========================================================
+Show
+    Rarity Rare
+    SetBackgroundColor 20 20 20 230     
+    SetTextColor 255 255 255 255
+    SetBorderColor 220 180 0 255
+    SetFontSize 45
+    PlayAlertSound 5 300
+    MinimapIcon 2 Yellow Star
+    PlayEffect Yellow
+
+# ===========================================================
+#                 ITENS ÚNICOS (Unique Itens)
+# ===========================================================
+Show
+    Rarity >= Unique
+    SetBackgroundColor 60 10 10 230     
+    SetTextColor 255 220 100 255
+    SetBorderColor 255 100 50 255
+    SetFontSize 45
+    PlayAlertSound 6 300
+    MinimapIcon 2 Orange Star
+    PlayEffect Orange
+
+# ===========================================================
+#                 MAPAS (Maps)
+# ===========================================================
+Show
+    Class "Maps"
+    SetBackgroundColor 30 30 30 230     
+    SetTextColor 255 255 180 255
+    SetBorderColor 255 255 0 255
+    SetFontSize 45
+    PlayAlertSound 7 250
+    MinimapIcon 2 Grey Square
+    PlayEffect Grey
+
+# ===========================================================
+#                 6-SOCKETS e 6-LINKS
+# ===========================================================
+Show  # 6 Links
+    Sockets >= 6
+    LinkedSockets 6
+    SetBackgroundColor 0 0 80 230       
+    SetTextColor 255 255 0 255
+    SetBorderColor 255 0 0 255
+    SetFontSize 45
+    PlayAlertSound 8 300
+    MinimapIcon 2 Blue Pentagon
+    PlayEffect Blue
+
+Show  # 6 Sockets (mas não necessariamente 6 Links)
+    Sockets 6
+    LinkedSockets < 6
+    SetBackgroundColor 0 0 80 180       
+    SetTextColor 255 255 255 255
+    SetBorderColor 0 255 255 255
+    SetFontSize 40
+    PlayAlertSound 9 200
+    MinimapIcon 2 Blue Pentagon
+    PlayEffect Blue
+
+# ===========================================================
+#                 ESCONDER O RESTANTE (Hide others)
+# ===========================================================
+Hide
+    SetFontSize 18
